@@ -20,6 +20,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:suchwowinc/composition-api-tailwindcss-sample-1.git main:gh-pages
+git push -f git@github.com:suchwowinc/composition-api-tailwindcss-sample-1.git master:gh-pages
 
 cd -
