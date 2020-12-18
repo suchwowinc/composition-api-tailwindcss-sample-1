@@ -1,27 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="w-9/12 m-auto">
+    <p >{{ doge.age }}</p>
+    <div class="flex justify-center">
+      <Button @doge="getDoge" @click="countUp">Click me</Button>
+    </div>
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+<script setup lang="ts">
+interface Doge {
+  name: string;
+  age: number;
+}
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-});
+
+import { ref, reactive, onMounted, computed } from "vue";
+import Button from "@/components/Button.vue";
+
+const doge = reactive<Doge>({
+  name: 'bob',
+  age: 999
+})
+
+onMounted( () => {
+  doge.age = 100
+})
+
+const countUp = () => {
+  doge.age++;
+}
+
+const getDoge = (v:any) => {
+  console.log(v);
+}
+
+
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
