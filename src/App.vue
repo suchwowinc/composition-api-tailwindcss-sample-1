@@ -2,7 +2,7 @@
   <div class="w-9/12 m-auto">
     <p >{{ doge.age }}</p>
     <div class="flex justify-center">
-      <Button @doge="getDoge" @click="countUp">Click me</Button>
+      <Button @doge="getDoge" @click="countUp">Click Me</Button>
     </div>
   </div>
 </template>
