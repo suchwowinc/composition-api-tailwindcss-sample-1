@@ -45,10 +45,5 @@ export default {
     }
   }
 }
-
-
-
-
-
 </script>
 
