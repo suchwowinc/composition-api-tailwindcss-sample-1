@@ -1,7 +1,6 @@
 {
   "name": "composition-api-app",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --port 9000",
     "build": "vue-cli-service build",
