@@ -18,5 +18,8 @@
     </div>
   </div>
   <router-view/>
+  <div class="absolute left-20 bottom-20">
+    <div class="text-4xl rounded-lg border-4 border-indigo-400 bg-indigo-400 text-white p-4 cursor-pointer shadow-xl">I am here.</div>
+  </div>
 </template>
 
