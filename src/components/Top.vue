@@ -18,13 +18,13 @@
     <div class=" text-gray-500">The AMAZING Counter</div>
     <div class="mt-10 text-9xl text-gray-500  p-6 rounded-xl bg-yellow-100">{{ doge.age }}</div>
     <div class="mt-10">
-      <MyButton @doge="getDoge" @click="countUp(1)">count up</MyButton>       
+      <MyButton @doge="getDoge" @click="countUp(1)">count up</MyButton>
     </div>
     <div class="mt-4">
-      <MyButton @doge="getDoge" @click="countUp(10)">uncommon count up</MyButton>       
+      <MyButton @doge="getDoge" @click="countUp(10)">uncommon count up</MyButton>
     </div>
     <div class="mt-4">
-      <MyButton @doge="getDoge" @click="countUp(100)">super count up</MyButton>       
+      <MyButton @doge="getDoge" @click="countUp(100)">super count up</MyButton>
     </div>
   </div>
 </template>
