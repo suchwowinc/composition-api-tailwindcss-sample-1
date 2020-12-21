@@ -12,14 +12,29 @@
           <router-link to="/list">List</router-link>
         </a>
         <a href="#" class="ml-8 whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-          <router-link to="/cart">Cart</router-link>
+          <router-link to="/cart">Cart[{{counts}}]</router-link>
         </a>
       </div>
     </div>
   </div>
+  <information-button/>
   <router-view/>
-  <div class="absolute left-20 bottom-20">
-    <div class="text-4xl rounded-lg border-4 border-indigo-400 bg-indigo-400 text-white p-4 cursor-pointer shadow-xl">I am here.</div>
-  </div>
+
 </template>
 
+<script lang="ts">
+import InformationButton from '@/components/InformationButton.vue'
+import { useCart } from "@/store/store";
+
+export default {
+  components:{
+    InformationButton
+  },
+  setup(){
+    const { getCartCounts } = useCart()
+    return {
+      counts: getCartCounts
+    }
+  }
+}
+</script>

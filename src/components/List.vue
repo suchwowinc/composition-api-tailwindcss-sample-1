@@ -11,12 +11,13 @@
 
 <script lang="ts">
 import { reactive, onMounted } from 'vue'
-import useCart  from '@/store/store.ts';
+import { useCart, useInformation }  from '@/store/store.ts';
 
 export default {
   setup() {
     const items = reactive<string[]>([])
     const { addToCart } = useCart()
+    const { setMessage } = useInformation()
 
     onMounted(() => {
       items.push('apple')
@@ -25,8 +26,8 @@ export default {
     })
 
     const getItem = (item:string) => {
-      console.log(item);
       addToCart(item);
+      setMessage(`You added ${item} in the cart`)
     }
 
     return {

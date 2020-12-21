@@ -16,14 +16,16 @@
 </template>
 
 <script lang="ts">
-import useCart  from '@/store/store.ts';
+import { useInformation, useCart}  from '@/store/store.ts';
 
 export default {
   setup(){
-    const { getCart, resetCart } = useCart();
+    const { getCart, resetCart  } = useCart();
+    const { setMessage  } = useInformation()
 
     const clearCart = () => {
       resetCart();
+      setMessage("You cleared your cart")
     }
 
     return {
