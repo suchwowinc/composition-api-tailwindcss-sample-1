@@ -9,7 +9,10 @@
           <router-link to="/">Home</router-link>
         </a>
         <a href="#" class="ml-8 whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-          <router-link to="/about">About</router-link>
+          <router-link to="/list">List</router-link>
+        </a>
+        <a href="#" class="ml-8 whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+          <router-link to="/cart">Cart</router-link>
         </a>
       </div>
     </div>
