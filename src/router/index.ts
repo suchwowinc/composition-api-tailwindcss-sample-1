@@ -4,6 +4,7 @@ import List from '@/components/pages/List.vue';
 import Cart from '@/components/pages/Cart.vue';
 import Modal from '@/components/pages/Modal.vue';
 import Mouse from "@/components/pages/Mouse.vue";
+import Chat from '@/components/pages/Chat.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -30,6 +31,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/mouse',
     name: 'Mouse',
     component: Mouse
+  },
+  {
+    path: '/chat',
+    name: 'Chat',
+    component: Chat
   },
 ]
 

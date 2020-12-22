@@ -20,6 +20,9 @@
         <a href="#" class="ml-8 whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
           <router-link to="/mouse">Mouse</router-link>
         </a>
+        <a href="#" class="ml-8 whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+          <router-link to="/chat">Chat</router-link>
+        </a>
       </div>
     </div>
   </div>
