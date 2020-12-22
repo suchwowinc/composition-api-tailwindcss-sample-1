@@ -3,6 +3,7 @@ import Top from '@/components/pages/Top.vue';
 import List from '@/components/pages/List.vue';
 import Cart from '@/components/pages/Cart.vue';
 import Modal from '@/components/pages/Modal.vue';
+import Mouse from "@/components/pages/Mouse.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -24,6 +25,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/modal',
     name: 'Modal',
     component: Modal
+  },
+  {
+    path: '/mouse',
+    name: 'Mouse',
+    component: Mouse
   },
 ]
 
