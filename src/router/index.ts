@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Top from '@/components/Top.vue';
-import List from '@/components/List.vue';
-import Cart from '@/components/Cart.vue';
-import Modal from '@/components/Modal.vue';
+import Top from '@/components/pages/Top.vue';
+import List from '@/components/pages/List.vue';
+import Cart from '@/components/pages/Cart.vue';
+import Modal from '@/components/pages/Modal.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {

@@ -3,7 +3,7 @@
     <div class=" text-gray-500">The AMAZING Counter</div>
     <div class="mt-10 text-9xl text-gray-500  p-6 rounded-xl bg-yellow-100">{{ doge.age }}</div>
     <div class="mt-8">
-      <iframe v-if="over9000" width="560" height="315" src="https://www.youtube.com/embed/PCHxU7witPA?controls=0&amp;start=9" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+      <iframe v-if="over9000" width="560" height="315" src="https://www.youtube.com/embed/PCHxU7witPA?controls=0&amp;start=9&end=12&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
     </div>
     <div class="mt-10">
       <MyButton @doge="getDoge" @click="countUp(1)">count up</MyButton>
