@@ -21,25 +21,25 @@ interface Doge {
   age: number;
 }
 
-import { ref, reactive, onMounted, computed } from "vue";
+import { reactive } from "vue";
 import MyButton from "@/components/MyButton.vue";
+import { useInformation } from "@/store/store";
 
 export default {
   components:{
     MyButton
   },
   setup(){
+    const { setMessage } = useInformation();
+
     const doge = reactive<Doge>({
       name: 'bob',
       age: 0
     })
 
-    // onMounted( () => {
-    //   doge.age = 100
-    // })
-
     const countUp = (v:number) => {
       doge.age += v
+      setMessage(`You add count: ${v}`)
     }
 
     const getDoge = (v:any) => {

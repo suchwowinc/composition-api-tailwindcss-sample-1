@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Top from '@/components/Top.vue';
 import List from '@/components/List.vue';
 import Cart from '@/components/Cart.vue';
+import Modal from '@/components/Modal.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,6 +19,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/cart',
     name: 'Cart',
     component: Cart
+  },
+  {
+    path: '/modal',
+    name: 'Modal',
+    component: Modal
   },
 ]
 
