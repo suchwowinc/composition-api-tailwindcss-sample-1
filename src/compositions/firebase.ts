@@ -16,6 +16,7 @@ firebase.initializeApp(firebaseConfig);
 const useFirebaseChat = () => {
   const firestore = firebase.firestore();
   const messages = ref<string[]>([])
+  const enable = ref<boolean>(false);
 
   const sendMessage = (message: string) => {
     firestore.collection("messages").doc().set({
@@ -39,9 +40,23 @@ const useFirebaseChat = () => {
     return messages.value.reverse()
   })
   
+  firestore.collection('setting')
+    .doc('enable')
+    .onSnapshot( doc => {
+      const data = doc.data();
+      if(data){
+        enable.value = data.value as boolean;
+      }
+    })
+  
+  const getEnable = computed( () => {
+    return enable.value
+  })
+  
   return {
     sendMessage,
-    getMessages
+    getMessages,
+    getEnable
   }
 }
 
