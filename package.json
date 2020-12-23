@@ -5,7 +5,8 @@
     "serve": "vue-cli-service serve --port 9000",
     "build": "vue-cli-service build",
     "deploy": "sh deploy.sh",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "dependencies": {
     "firebase": "8.2.1",
